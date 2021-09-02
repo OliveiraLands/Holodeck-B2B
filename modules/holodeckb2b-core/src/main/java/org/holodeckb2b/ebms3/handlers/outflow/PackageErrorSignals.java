@@ -134,13 +134,10 @@ public class PackageErrorSignals extends AbstractBaseHandler {
         final boolean isSoap11 = env.getVersion() instanceof SOAP11Version;
 
         final SOAPFaultCode  fCode = factory.createSOAPFaultCode(fault);
-        final QName   faultValue = new QName(env.getNamespaceURI(), "Client");
-        if (isSoap11) {
-            fCode.setText(faultValue);
-        } else {
-            final SOAPFaultValue fValue = factory.createSOAPFaultValue(fCode);
-            fValue.setText(faultValue);
-        }
+        if (isSoap11)
+            fCode.setText(new QName(env.getNamespaceURI(), "Client"));
+        else
+            factory.createSOAPFaultValue(fCode).setText(new QName(env.getNamespaceURI(), "Sender"));
 
         final SOAPFaultReason fReason = factory.createSOAPFaultReason(fault);
         final String          reason =
