@@ -7,12 +7,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 * Generated Content-Id results in signature failure [#99](https://github.com/holodeck-b2b/Holodeck-B2B/issues/99)
 * NPE when white space is containd between the `ds:Signature` and `ds:SignedInfo` elements of a received message [#100](https://github.com/holodeck-b2b/Holodeck-B2B/issues/100)
-* NPE for submitted UserMessage without CollaborationInfo [#105](https://github.com/holodeck-b2b/Holodeck-B2B/issues/105)
 * Incorrect reporting of key transport algorithm 
-* Duplicate messages not eliminated [#117](https://github.com/holodeck-b2b/Holodeck-B2B/issues/117)
 * NPE on retransmission check when no retries set in P-Mode
 * Invalid SOAPFault included with ebMS Error using SOAP 1.2 [#103](https://github.com/holodeck-b2b/Holodeck-B2B/issues/103)
 * Inconsistency in reception awareness [#104](https://github.com/holodeck-b2b/Holodeck-B2B/issues/104)
+* NPE for submitted UserMessage without CollaborationInfo [#105](https://github.com/holodeck-b2b/Holodeck-B2B/issues/105)
+* Duplicate messages not eliminated [#117](https://github.com/holodeck-b2b/Holodeck-B2B/issues/117)
+* Vulnerability in log4j2 [#123](https://github.com/holodeck-b2b/Holodeck-B2B/issues/123)  
 
 ## 4.1.2
 ##### 2019-04-10
