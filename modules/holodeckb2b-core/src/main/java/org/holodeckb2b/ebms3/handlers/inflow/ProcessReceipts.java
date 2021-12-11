@@ -167,7 +167,7 @@ public class ProcessReceipts extends AbstractBaseHandler {
      */
     protected boolean isWaitingForReceipt(final IMessageUnitEntity mu) throws PersistenceException {
         ProcessingState currentState = mu.getCurrentProcessingState().getState();
-        if (currentState == ProcessingState.AWAITING_RECEIPT || currentState == ProcessingState.TRANSPORT_FAILURE))
+        if (currentState == ProcessingState.AWAITING_RECEIPT || currentState == ProcessingState.TRANSPORT_FAILURE)
             return true;
         else if (currentState == ProcessingState.AWAITING_PULL || currentState == ProcessingState.READY_TO_PUSH
                 || currentState == ProcessingState.TRANSPORT_FAILURE) {
